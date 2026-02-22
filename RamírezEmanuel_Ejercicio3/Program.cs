@@ -145,9 +145,9 @@ switch (cliente)
                     }
                     else
                     {
-                        Console.WriteLine("Descuento: 10%");
+                        Console.WriteLine("Descuento: 0%");
                         Console.WriteLine($"Recargo: {recargo * 0}%");
-                        Console.WriteLine($"Total final: Q{monto + (monto * 0.1)}");
+                        Console.WriteLine($"Total final: Q{monto}");
                     }
                     break;
                 case 2:
@@ -165,9 +165,9 @@ switch (cliente)
                     }
                     else
                     {
-                        Console.WriteLine("Descuento: 7%");
+                        Console.WriteLine("Descuento: 0%");
                         Console.WriteLine($"Recargo: {recargo * 0}%");
-                        Console.WriteLine($"Total final: Q{monto - (monto * 0.07)}");
+                        Console.WriteLine($"Total final: Q{monto}");
                     }
                     break;
                 case 3:
@@ -213,9 +213,9 @@ switch (cliente)
                     }
                     else
                     {
-                        Console.WriteLine("Descuento: 10%");
+                        Console.WriteLine("Descuento: 0%");
                         Console.WriteLine($"Recargo: {recargo * 0}%");
-                        Console.WriteLine($"Total final: Q{monto + (monto * 0.1)}");
+                        Console.WriteLine($"Total final: Q{monto}");
                     }
                     break;
                 case 2:
@@ -233,9 +233,9 @@ switch (cliente)
                     }
                     else
                     {
-                        Console.WriteLine("Descuento: 7%");
+                        Console.WriteLine("Descuento: 0%");
                         Console.WriteLine($"Recargo: {recargo * 0}%");
-                        Console.WriteLine($"Total final: Q{monto - (monto * 0.07)}");
+                        Console.WriteLine($"Total final: Q{monto}");
                     }
                     break;
                 case 3:
@@ -281,9 +281,9 @@ switch (cliente)
                     }
                     else
                     {
-                        Console.WriteLine("Descuento: 10%");
+                        Console.WriteLine("Descuento: 0%%");
                         Console.WriteLine($"Recargo: {recargo * 0}%");
-                        Console.WriteLine($"Total final: Q{monto + (monto * 0.1)}");
+                        Console.WriteLine($"Total final: Q{monto}");
                     }
                     break;
                 case 2:
@@ -301,9 +301,9 @@ switch (cliente)
                     }
                     else
                     {
-                        Console.WriteLine("Descuento: 7%");
+                        Console.WriteLine("Descuento: 0%");
                         Console.WriteLine($"Recargo: {recargo * 0}%");
-                        Console.WriteLine($"Total final: Q{monto - (monto * 0.07)}");
+                        Console.WriteLine($"Total final: Q{monto}");
                     }
                     break;
                 case 3:
