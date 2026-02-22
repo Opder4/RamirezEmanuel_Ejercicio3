@@ -341,3 +341,4 @@ else
     Console.WriteLine("Los datos son inválidos");
     Console.WriteLine("Ingrese datos que sean válidos");
 }
+Console.WriteLine("");
