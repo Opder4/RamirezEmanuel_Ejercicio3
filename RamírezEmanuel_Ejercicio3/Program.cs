@@ -24,11 +24,25 @@ Console.WriteLine("");
 Console.WriteLine("Tiene cupón? (s/n)");
 Console.WriteLine("");
 string cupon=Console.ReadLine();
-string codigo = "";
+bool validacion=false;
 if (cupon=="s")
 {
-    Console.WriteLine("Ingrese el código: ");
-    codigo = Console.ReadLine();
+    Console.WriteLine("Ingrese la primera letra de su cupón: ");
+    Console.WriteLine("");
+    string primeraletra=Console.ReadLine();
+    Console.WriteLine("");
+    Console.WriteLine("Ingrese el último dígito de su cupón: ");
+    Console.WriteLine("");
+    int ultimodigito=int.Parse(Console.ReadLine());
+    Console.WriteLine("");
+    if (primeraletra == "U" && (ultimodigito % 2 == 0))
+    {
+        validacion = true;
+    }
+    else
+    {
+        validacion = false;
+    }
 }
 Console.WriteLine("");
 Console.WriteLine("Ingrese el Reporte antifraude: ");
@@ -39,3 +53,12 @@ Console.WriteLine("3. Pagos rechazados múltiples");
 Console.WriteLine("");
 int reporte=int.Parse(Console.ReadLine());
 Console.WriteLine("");
+if (monto>=0 && (cupon=="s" || cupon == "n"))
+{
+
+}
+else
+{
+    Console.WriteLine("Los datos son inválidos");
+    Console.WriteLine("Ingrese datos que sean válidos");
+}
