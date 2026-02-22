@@ -55,7 +55,80 @@ int reporte=int.Parse(Console.ReadLine());
 Console.WriteLine("");
 if (monto>=0 && (cupon=="s" || cupon == "n"))
 {
-
+switch (cliente)
+    {
+        case 1:
+            switch (pago)
+            {
+                case 1:
+                    Console.WriteLine("");
+                    break;
+                case 2:
+                    Console.WriteLine("");
+                    break;
+                case 3:
+                    Console.WriteLine("");
+                    break;
+                default:
+                    Console.WriteLine("");
+                    break;
+            }
+            break;
+        case 2:
+            switch (pago)
+            {
+                case 1:
+                    Console.WriteLine("");
+                    break;
+                case 2:
+                    Console.WriteLine("");
+                    break;
+                case 3:
+                    Console.WriteLine("");
+                    break;
+                default:
+                    Console.WriteLine("");
+                    break;
+            }
+            break;
+        case 3:
+            switch (pago)
+            {
+                case 1:
+                    Console.WriteLine("");
+                    break;
+                case 2:
+                    Console.WriteLine("");
+                    break;
+                case 3:
+                    Console.WriteLine("");
+                    break;
+                default:
+                    Console.WriteLine("");
+                    break;
+            }
+            break;
+        case 4:
+            switch (pago)
+            {
+                case 1:
+                    Console.WriteLine("");
+                    break;
+                case 2:
+                    Console.WriteLine("");
+                    break;
+                case 3:
+                    Console.WriteLine("");
+                    break;
+                default:
+                    Console.WriteLine("");
+                    break;
+            }
+            break;
+        default:
+            Console.WriteLine("");
+            break;
+    }
 }
 else
 {
