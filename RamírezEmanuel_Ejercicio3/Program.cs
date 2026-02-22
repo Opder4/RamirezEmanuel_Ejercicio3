@@ -53,7 +53,9 @@ Console.WriteLine("3. Pagos rechazados múltiples");
 Console.WriteLine("");
 int reporte=int.Parse(Console.ReadLine());
 Console.WriteLine("");
-if (monto>=0 && (cupon=="s" || cupon == "n"))
+double descuento = 0.1;
+double recargo = 0.05;
+if (monto>=0 && (cupon=="s" || cupon == "n") && reporte>=1 && reporte<=3)
 {
 switch (cliente)
     {
@@ -61,16 +63,67 @@ switch (cliente)
             switch (pago)
             {
                 case 1:
-                    Console.WriteLine("");
-                    break;
+                    if (reporte==2 || reporte==3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo*100}%");
+                        Console.WriteLine($"Total final: Q{monto+(monto*recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento*100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento))-(0.1* (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 10%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * 0.1)}");
+                    }
+                        break;
                 case 2:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.07 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 7%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto - (monto * 0.07)}");
+                    }
                     break;
                 case 3:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.07 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 0%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto}");
+                    }
                     break;
                 default:
-                    Console.WriteLine("");
+                    Console.WriteLine("Método de pago no válido");
                     break;
             }
             break;
@@ -78,16 +131,67 @@ switch (cliente)
             switch (pago)
             {
                 case 1:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.1 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 10%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * 0.1)}");
+                    }
                     break;
                 case 2:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.07 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 7%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto - (monto * 0.07)}");
+                    }
                     break;
                 case 3:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.07 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 0%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto}");
+                    }
                     break;
                 default:
-                    Console.WriteLine("");
+                    Console.WriteLine("Método de pago no válido");
                     break;
             }
             break;
@@ -95,16 +199,67 @@ switch (cliente)
             switch (pago)
             {
                 case 1:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.1 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 10%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * 0.1)}");
+                    }
                     break;
                 case 2:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.07 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 7%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto - (monto * 0.07)}");
+                    }
                     break;
                 case 3:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.07 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 0%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto}");
+                    }
                     break;
                 default:
-                    Console.WriteLine("");
+                    Console.WriteLine("Método de pago no válido");
                     break;
             }
             break;
@@ -112,21 +267,72 @@ switch (cliente)
             switch (pago)
             {
                 case 1:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.1 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 10%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * 0.1)}");
+                    }
                     break;
                 case 2:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.07 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 7%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto - (monto * 0.07)}");
+                    }
                     break;
                 case 3:
-                    Console.WriteLine("");
+                    if (reporte == 2 || reporte == 3)
+                    {
+                        Console.WriteLine("Descuento: Ninguno");
+                        Console.WriteLine($"Recargo: {recargo * 100}%");
+                        Console.WriteLine($"Total final: Q{monto + (monto * recargo)}");
+                    }
+                    else if (validacion)
+                    {
+                        Console.WriteLine($"Descuento: {descuento * 100}%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{(monto - (monto * descuento)) - (0.07 * (monto - (monto * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descuento: 0%");
+                        Console.WriteLine($"Recargo: {recargo * 0}%");
+                        Console.WriteLine($"Total final: Q{monto}");
+                    }
                     break;
                 default:
-                    Console.WriteLine("");
+                    Console.WriteLine("Método de pago no válido");
                     break;
             }
             break;
         default:
-            Console.WriteLine("");
+            Console.WriteLine("Tipo de cliente no válido");
             break;
     }
 }
